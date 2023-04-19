@@ -16,9 +16,9 @@ export const getThemeConfig = (settings: ThemeSettings) => {
     space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
     fonts: {
       body:
-        '-apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;',
+        'Space Grotesk,apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;',
       heading:
-        '-apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;',
+        'Space Grotesk,-apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;',
       monospace: '"Roboto Mono", monospace',
     },
     fontSizes: [12, 14, 16, 20, 24, 32, 48, 64, 96],

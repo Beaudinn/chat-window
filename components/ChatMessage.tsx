@@ -119,6 +119,7 @@ const ChatMessage = ({
           <ChatMessageBody
             className="Text--white"
             sx={{
+              borderRadius: '10px 0px 10px 10px',
               color: 'background',
               bg: 'primary',
               whiteSpace: 'pre-wrap',

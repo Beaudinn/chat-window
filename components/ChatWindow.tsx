@@ -74,6 +74,29 @@ type State = {
   shouldDisplayBranding: boolean;
 };
 
+const HeaderAvatar = ({}: {}) => {
+  const profilePhotoUrl = '/brand-freeday-avatar.png';
+
+  if (true) {
+    return (
+      <Box
+        mr={2}
+        style={{
+          height: 32,
+          width: 32,
+          borderRadius: '50%',
+          justifyContent: 'center',
+          alignItems: 'center',
+
+          backgroundPosition: 'center',
+          backgroundSize: 'cover',
+          backgroundImage: `url(${profilePhotoUrl})`,
+        }}
+      />
+    );
+  }
+};
+
 class ChatWindow extends React.Component<Props, State> {
   scrollToEl: any = null;
   subscriptions: Array<() => void> = [];
@@ -309,7 +332,8 @@ class ChatWindow extends React.Component<Props, State> {
     const plan = payload && payload.plan;
     const shouldHideBranding = settings && settings.is_branding_hidden;
     const isTeamPlan = plan && String(plan).toLowerCase() === 'team';
-    const shouldDisplayBranding = !(isTeamPlan && shouldHideBranding);
+    const shouldDisplayBranding = false;
+    // !(isTeamPlan && shouldHideBranding);
 
     this.setState({shouldDisplayBranding});
   };
@@ -545,7 +569,7 @@ class ChatWindow extends React.Component<Props, State> {
     const {
       title = 'Welcome!',
       subtitle = 'How can we help you?',
-      newMessagePlaceholder = 'Start typing...',
+      newMessagePlaceholder = 'Ask a question',
       emailInputPlaceholder = 'Enter your email',
       agentAvailableText = "We're online right now!",
       agentUnavailableText = "We're away at the moment.",
@@ -625,14 +649,19 @@ class ChatWindow extends React.Component<Props, State> {
                 onClick={this.emitCloseWindow}
               />
             )}
-            <Heading
-              as="h2"
-              className="Papercups-heading"
-              sx={{color: 'background', my: 1, mr: 12}}
-            >
-              {title}
-            </Heading>
-            <Text sx={{color: 'offset'}}>{subtitle}</Text>
+            <Flex sx={{justifyContent: 'flex-start', alignItems: 'center'}}>
+              <HeaderAvatar />
+              <Box>
+                <Heading
+                  as="h2"
+                  className="Papercups-heading"
+                  sx={{color: 'background', my: 1, mr: 12}}
+                >
+                  {title}
+                </Heading>
+                <Text sx={{color: 'offset'}}>{subtitle}</Text>
+              </Box>
+            </Flex>
           </Box>
 
           {showAgentAvailability && (

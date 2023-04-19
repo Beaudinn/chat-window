@@ -149,7 +149,7 @@ class Wrapper extends React.Component<Props, State> {
       agentUnavailableText,
       title = 'Welcome!',
       subtitle = 'How can we help you?',
-      newMessagePlaceholder = 'Start typing...',
+      newMessagePlaceholder = 'Ask a question',
       emailInputPlaceholder = 'Enter your email',
       newMessagesNotificationText = 'View new messages',
       primaryColor = '1890ff',
